@@ -1,6 +1,6 @@
 /* Configuración General */
 body {
-    background-color: #1a1110; /* Fondo café oscuro/negro */
+    background-color: #1a1110; /* Fondo marron oscuro/negro */
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,9 +10,9 @@ body {
     align-items: center;
 }
 
-/* Título Superior */
+/* AGUSTIN TAPIA */
 .titulo-principal {
-    color: #b54d2b; /* Color naranja oscuro del boceto */
+    color: #b54d2b; /* Color naranja oscuro  */
     font-size: 8rem;
     font-weight: bold;
     margin: 40px 0;
@@ -45,13 +45,11 @@ body {
     
 }
 
-.espacio-foto {
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.5rem;
+espacio-foto {
+    position: relative; /* Esto le pone "paredes" al título para que no se salga */
+    display: inline-block; /* Hace que el contenedor mida lo mismo que la imagen */
+}
+
 }
 
 .pie-blanco {
@@ -62,8 +60,8 @@ body {
 /* texto 1 */
 .cuadro-texto {
     width: 40%;
-    font-size: 0.9rem;
-    line-height: 3.0;
+    font-size: 2.5 rem;
+    line-height: 2.0;
 }
 
 /* Footer */
@@ -78,4 +76,30 @@ footer {
 .link-footer {
     font-size: 0.8rem;
     color: #ccc;
+@media (max-width: 768px) {
+    /* La fila deja de ser horizontal y se pone uno arriba del otro */
+    .fila {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    /* El texto ocupa más ancho en el celular */
+    .cuadro-texto {
+        width: 90%;
+        font-size: 1.1rem; /* Ajustamos el tamaño para que sea legible */
+        margin-bottom: 30px;
+    }
+
+    /* La imagen se centra y ajusta su tamaño */
+    .tarjeta-imagen {
+        width: 90%; /* Casi todo el ancho del celular */
+        max-width: 320px; /* Pero que no crezca demasiado */
+        margin: 0 auto;
+    }
+
+    /* Ajustamos el título gigante para que no rompa la pantalla */
+    .titulo-principal {
+        font-size: 3.5rem; 
+        margin: 20px 0;
+    }
 }
