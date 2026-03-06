@@ -1,0 +1,81 @@
+/* Configuración General */
+body {
+    background-color: #1a1110; /* Fondo café oscuro/negro */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título Superior */
+.titulo-principal {
+    color: #b54d2b; /* Color naranja oscuro del boceto */
+    font-size: 8rem;
+    font-weight: bold;
+    margin: 40px 0;
+    text-align: center;
+}
+
+/* Contenedor de las secciones */
+.contenedor-blog {
+    width: 80%;
+    max-width: 900px;
+}
+
+.fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.fila.inverso {
+    flex-direction: row; /* Mantiene el orden o puedes usar row-reverse */
+}
+
+/* Tarjetas de Imagen */
+.tarjeta-imagen {
+    width: 300px;
+    background-color: #b54d2b;
+    border-radius: 8px;
+    overflow: hidden;
+    
+}
+
+.espacio-foto {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.pie-blanco {
+    background-color: #f5f5dc; /* Color crema/blanco de la base */
+    height: 60px;
+}
+
+/* texto 1 */
+.cuadro-texto {
+    width: 40%;
+    font-size: 0.9rem;
+    line-height: 3.0;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    border-top: 1px solid #333;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.link-footer {
+    font-size: 0.8rem;
+    color: #ccc;
+}
