@@ -3,55 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog - Boceto</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Blog Agustín Tapia - Responsive</title>
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        body {
+            background-color: #1a1b2e; /* Fondo oscuro azulado del diseño */
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px; /* Ancho máximo en PC */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            color: #d35400; /* Color naranja del título */
+            font-size: clamp(3rem, 10vw, 6rem); /* Se encoge en móvil y crece en PC */
+            text-align: center;
+            margin: 40px 0;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        /* --- ESTRUCTURA FLEXIBLE (PC) --- */
+        .section {
+            display: flex;
+            flex-direction: row; /* Uno al lado del otro en PC */
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            gap: 30px;
+        }
+
+        /* Invertimos el orden para la segunda sección en PC */
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .image-container {
+            flex: 1;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px; /* Bordes redondeados */
+            display: block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .text-container {
+            flex: 1;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #333;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* --- AJUSTES PARA TELÉFONOS (MÓVIL) --- */
+        @media (max-width: 768px) {
+            .section, .section.reverse {
+                flex-direction: column; /* Se ponen uno arriba del otro */
+                text-align: center;
+            }
+
+            .text-container {
+                padding: 0 10px;
+            }
+
+            header h1 {
+                margin: 20px 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1 class="titulo-principal">AGUSTIN TAPIA</h1>
-        <h2>Madrid Master 2019</h2>
-    </header>
+    <div class="container">
+        <header>
+            <h1>AGUSTIN TAPIA</h1>
+        </header>
 
-    <main class="contenedor-blog">
-        <section class="fila">
-            <div class="tarjeta-imagen">
-                <div class="espacio-foto"><img src="AGUSTIN VIEJO.jpg" alt="Tapia viejo"></div>
-                <div class="pie-blanco"></div>
+        <div class="section">
+            <div class="image-container">
+                <img src="AGUSTIN VIEJO.jpg" alt="Agustín Tapia en acción">
             </div>
-            <div class="cuadro-texto">
-                <p>Año: 2019 (específicamente en septiembre).
-
-Hito: Este torneo fue histórico porque Agustín Tapia se convirtió en el jugador más joven de la historia en ganar un Master del World Padel Tour, con apenas 20 años, jugando junto a la leyenda Fernando Belasteguín.</p>
+            <div class="text-container">
+                <p>Agustín Tapia es el talento puro del pádel argentino. Su capacidad para definir puntos desde cualquier lugar de la pista lo ha convertido en un ídolo global.</p>
             </div>
-        </section>
-        <section class="fila inverso">
-            <div class="cuadro-texto">
-                <p>A sus 26 años, el argentino Agustín Tapia se ha consolidado no solo como el número 1 del ranking FIP (junto a Arturo Coello), sino como una leyenda viviente del deporte. Tras un 2025 histórico donde dominaron el circuito Premier Padel, Tapia ha iniciado el 2026 rompiendo récords de precocidad y títulos.
+        </div>
 
-Logro Histórico (Febrero 2026): Recientemente se convirtió en el jugador en activo con más títulos profesionales (54), superando la marca de Alejandro Galán tras coronarse en el Riyadh Premier Padel P1.
-
-Estilo de Juego: Apodado "El Mozart de Catamarca", es admirado por su juego creativo, su pegada eléctrica y una capacidad defensiva que desafía la lógica.</p>
+        <div class="section reverse">
+            <div class="image-container">
+                <img src="TAPIA NUEVO.jpg" alt="Agustín Tapia actual">
             </div>
-           <div class="tarjeta-imagen">
-    <div class="espacio-foto">
-        <img src="TAPIA NUEVO.jpg" alt="agustin actual" width="300px">
-        <h2 class="titulo-sobre-foto">El Mozart de Catamarca</h2>
+            <div class="text-container">
+                <p>Con un estilo agresivo y una defensa impenetrable, el "Mozart de Catamarca" sigue reescribiendo la historia en cada torneo que disputa.</p>
+            </div>
+        </div>
+
+        <footer>
+  <a href="http://github.com/loveradesing21-droid">Elaborado por Wilmer Lovera "</a>
+        </footer>
     </div>
-    <div class="pie-blanco"></div>
-</div>
-        </section>
-    </main>
-<footer>
-    <p>
-        Elaborado por 
-        <a href="https://github.com/loveradesing21-droid" class="link-footer">
-            <i class="fab fa-github"></i> Wilmer Lovera
-        </a>
-    </p>
-</footer>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </body>
 </html>

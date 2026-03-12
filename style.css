@@ -1,105 +1,90 @@
 /* Configuración General */
 body {
-    background-color: #1a1110; /* Fondo marron oscuro/negro */
+    background-color: #1a1a2e; /* Azul muy oscuro como el fondo del diseño */
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-/* AGUSTIN TAPIA */
-.titulo-principal {
-    color: #b54d2b; /* Color naranja oscuro  */
-    font-size: 8rem;
-    font-weight: bold;
-    margin: 40px 0;
+.container {
+    max-width: 800px;
+    width: 90%;
+    padding: 40px 0;
     text-align: center;
 }
 
-/* Contenedor de las secciones */
-.contenedor-blog {
-    width: 80%;
-    max-width: 900px;
+/* Título Principal */
+h1 {
+    font-size: 80px;
+    color: #d35400; /* Naranja quemado del diseño */
+    letter-spacing: -2px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.fila {
+/* Filas de Contenido */
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    gap: 20px;
 }
 
-.fila.inverso {
-    flex-direction: row; /* Mantiene el orden o puedes usar row-reverse */
+/* Para invertir el orden en la segunda fila */
+.reverse {
+    flex-direction: row-reverse;
 }
 
-/* Tarjetas de Imagen */
-.tarjeta-imagen {
-    width: 300px;
-    background-color: #b54d2b;
-    border-radius: 8px;
-    overflow: hidden;
-    
+/* Cajas de Imagen */
+.image-box {
+    flex: 1;
 }
 
-espacio-foto {
-    position: relative; /* Esto le pone "paredes" al título para que no se salga */
-    display: inline-block; /* Hace que el contenedor mida lo mismo que la imagen */
-}
-
-}
-
-.pie-blanco {
-    background-color: #f5f5dc; /* Color crema/blanco de la base */
-    height: 60px;
-}
-
-/* texto 1 */
-.cuadro-texto {
-    width: 40%;
-    font-size: 2.5 rem;
-    line-height: 2.0;
-}
-
-/* Footer */
-footer {
+.image-box img {
     width: 100%;
-    border-top: 1px solid #333;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 50px;
+    border-radius: 20px; /* Bordes redondeados como en tu imagen */
+    display: block;
 }
 
-.link-footer {
-    font-size: 0.8rem;
-    color: #ccc;
-@media (max-width: 768px) {
-    /* La fila deja de ser horizontal y se pone uno arriba del otro */
-    .fila {
-        flex-direction: column !important;
+/* Cajas de Texto */
+.text-box {
+    flex: 1;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+/* Footer y Enlace */
+footer {
+    margin-top: 40px;
+    border-top: 1px solid #ffffff33;
+    padding-top: 20px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Adaptación para Celulares */
+@media (max-width: 600px) {
+    .row, .reverse {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .text-box {
         text-align: center;
+        margin-top: 20px;
     }
-
-    /* El texto ocupa más ancho en el celular */
-    .cuadro-texto {
-        width: 90%;
-        font-size: 1.1rem; /* Ajustamos el tamaño para que sea legible */
-        margin-bottom: 30px;
-    }
-
-    /* La imagen se centra y ajusta su tamaño */
-    .tarjeta-imagen {
-        width: 90%; /* Casi todo el ancho del celular */
-        max-width: 320px; /* Pero que no crezca demasiado */
-        margin: 0 auto;
-    }
-
-    /* Ajustamos el título gigante para que no rompa la pantalla */
-    .titulo-principal {
-        font-size: 3.5rem; 
-        margin: 20px 0;
+}
     }
 }
